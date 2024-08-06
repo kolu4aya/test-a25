@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('api/create', 'App\Http\Controllers\UserController@store');
+Route::post('api/accept-transaction', 'App\Http\Controllers\UserController@accept_transaction');
+Route::get('api/get-amount', 'App\Http\Controllers\UserController@get_amount');
+Route::post('api/payment', 'App\Http\Controllers\UserController@payment');
